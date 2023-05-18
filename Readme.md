@@ -1,5 +1,5 @@
 
-# Online Marketplace Shipping Project -- SQL
+# Online Marketplace Shipping Project
 
 The schema mentioned in the title was created as part of a major project aimed at building from scratch some online marketplace (I’ll be referring to this particular online marketplace as just **OM**). 
 
