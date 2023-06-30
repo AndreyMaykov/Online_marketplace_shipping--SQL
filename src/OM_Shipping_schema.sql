@@ -21,7 +21,7 @@ DROP TABLE IF EXISTS roles;
 CREATE TABLE roles (
 	  id INT NOT NULL AUTO_INCREMENT
 	, role_name varchar(20) NOT NULL
-	, CONSTRAINT role_duplicate_r UNIQUE (role_id)
+	, CONSTRAINT role_duplicate_r UNIQUE (role_name)
 	, PRIMARY KEY (id)
 );
 INSERT INTO roles
