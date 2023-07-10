@@ -1,4 +1,18 @@
+/*
 
+Object: SQL script 
+
+MySQL version: 8.0
+
+Author: Andrey Maykov
+
+Script Date: 2022-08-17
+
+Description:
+ 
+The script creates the OM shipping schema tables.
+
+*/
 
 
 

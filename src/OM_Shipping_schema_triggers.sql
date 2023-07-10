@@ -1,3 +1,20 @@
+/*
+
+Object: SQL script 
+
+MySQL version: 8.0
+
+Author: Andrey Maykov
+
+Script Date: 2022-08-17
+
+Description:
+ 
+The script creates the OM shipping schema triggers.
+
+*/
+
+
 /* Automatically delete a user's picker profile
    from the picker_profiles table 
    if the user's picker role has been deleted 

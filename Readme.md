@@ -4,6 +4,7 @@
 The schema mentioned in the title was created as part of a major project aimed at building from scratch some online marketplace (I’ll be referring to this particular online marketplace as just **OM**). 
 
 ## Contents
+[Technologies](#technologies) <br />
 [On the entire OM database](#EntireDB) <br /> 
 [OM shipping process features and their implementation in the schema](#Shipping_features) <br />
 [Stage A: Determining employee and vehicle availability. OM Shipping schema](#Determining_availability) <br />
@@ -13,12 +14,18 @@ The schema mentioned in the title was created as part of a major project aimed a
 [Stage B: Dispatching orders and vehicles among employees and preparing shipment assignments](#Stage_B) <br />
 [Acknowledgements](#Acknowledgements) <br />
 
+<a name="technologies"></a>
+<h2>Technologies</h2>
+
+- MySQL 8.0.27 / MySQL Workbench 8.0.28
+- AWS RDS
+
 <a name = "EntireDB"><h2>On the entire OM database</h2></a>
 
 The OM system architecture includes a 3NF database (MySQL). Not only does this DB store all the information about OM's customers and their orders as well as sellers and their products, but it is used for planning shipping operations. 
 The following diagram shows the DB’s conceptual data model:
 
-![ ](https://github.com/AndreyMaykov/Online_marketplace_shipping__SQL/blob/main/images/OM_Full.svg)
+![ ](/images/OM_Full.svg)
 
 Tables in the diagram are grouped accordingly to the type of information they hold – whether it is related to customers, products, etc. The Common group includes a three-table structure **users&nbsp;&ndash;&nbsp;user_roles&nbsp;&ndash;&nbsp;roles**, which is worth elaborating on here.
 
@@ -52,14 +59,14 @@ These tasks define the structure of the Shipping section [of the OM database]. T
 </p>
 
 The following diagram shows the OM Shipping schema along with the Stage A and B data flows in the OM system (for the code, see
-<a href="https://github.com/AndreyMaykov/Online_marketplace_shipping__SQL/blob/main/src/OM_Shipping_schema.sql">OM_Shipping_schema.sql</a>).
+<a href="/src/OM_Shipping_schema_tables.sql">OM_Shipping_schema_tables.sql</a>).
 To integrate the Shipping tables developed this way into the entire OM schema, one only needs to add them to the rest of the tables: no references between the Shipping tables and the tables in the Customers, Vendors, Products, and Orders sections are required.
 
 
 
 <a name = "OM_Shipping diagram">
 	
-![ ](https://github.com/AndreyMaykov/Online_marketplace_shipping__SQL/blob/main/images/OM_Shipping_0.5.svg)
+![ ](/images/OM_Shipping_0.5.svg)
 	
 </a>
 
@@ -105,9 +112,9 @@ A number of constraints are added to the Shipping tables.
 - ON DELETE CASCADE and ON UPDATE CASCADE subclauses are defined to enforce data integrity where appropriate; otherwise, triggers are used for that.
 
 For details, please see the code and comments in
-<a href="https://github.com/AndreyMaykov/Online_marketplace_shipping__SQL/blob/main/src/OM_Shipping_schema.sql">OM_Shipping_schema.sql</a> 
+<a href="/src/OM_Shipping_schema_tables.sql">OM_Shipping_schema_tables.sql</a> 
 and 
-<a href="https://github.com/AndreyMaykov/Online_marketplace_shipping__SQL/blob/main/src/OM_Shipping_triggers.sql">OM_Shipping_triggers.sql</a>).
+<a href="/src/OM_Shipping_schema_triggers.sql">OM_Shipping_schema_triggers.sql</a>).
 
 
 <a name = "Calculating_intervals"><h3>Calculating availability for a wave</h3></a>
@@ -130,5 +137,5 @@ As <a href = "#OM_Shipping diagram">the diagram</a> shows, information required 
 
 <a name="Acknowledgements"><h2>Acknowledgements</h2></a>
 
-I would like to thank Alek Mlynek for initiating this project as well as discussing it in depth and in detail.
+I would like to thank Alek Mlynek for initiating this project. Also, I am most grateful to him and Tue Hoang for the very helpful discusions we had on this project.
 
