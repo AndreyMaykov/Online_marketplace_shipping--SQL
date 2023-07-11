@@ -1,3 +1,24 @@
+/*
+
+Object: SQL script 
+
+MySQL version: 8.0
+
+Author: Andrey Maykov
+
+Script Date: 2023-07-05
+
+Description:
+ 
+The script populates the project's schema tables. Then the inserted
+data are used in demo scripts OM_shipping_schema_constraints_demo.sql
+and OM_shipping_schema_triggers_demo.sql.
+
+For convenience, the statements used in the OM_shipping_schema_tables.sql
+to create the tables are provided in comments just above the corresponding
+INSERT statements.   
+
+*/
 
 
 /* 

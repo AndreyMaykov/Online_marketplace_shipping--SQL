@@ -10,6 +10,7 @@ The schema mentioned in the title was created as part of a major project aimed a
 [Stage A: Determining employee and vehicle availability. OM Shipping schema](#Determining_availability) <br />
   [How the data is organized into tables](#Data_in_tables) <br />
   [Constraints and triggers](#Constraints) <br />
+    [Examples](#constraint_and_trigger_and_demos) <br />
   [Calculating availability intervals for a wave](#Calculating_intervals) <br />
 [Stage B: Dispatching orders and vehicles among employees and preparing shipment assignments](#Stage_B) <br />
 [Acknowledgements](#Acknowledgements) <br />
@@ -115,6 +116,16 @@ For details, please see the code and comments in
 <a href="/src/OM_Shipping_schema_tables.sql">OM_Shipping_schema_tables.sql</a> 
 and 
 <a href="/src/OM_Shipping_schema_triggers.sql">OM_Shipping_schema_triggers.sql</a>).
+
+
+<a name="constraint_and_trigger_and_demos"></a>
+
+<h4>Examples</h4>
+
+Examples demonstrating how these constraints and triggers enforce the data integrity in the OM shipping management system are provided in
+<a href="/src/examples/table_populating.sql">table_populating.sql</a>,
+<a href="/src/examples/constraints_demo.sql">constraints_demo.sql</a> and
+<a href="/src/examples/triggers_demo.sql">table_populating.sql</a>. 
 
 
 <a name = "Calculating_intervals"><h3>Calculating availability for a wave</h3></a>
