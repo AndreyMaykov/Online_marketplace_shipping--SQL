@@ -11,7 +11,7 @@ The schema mentioned in the title was created as part of a major project aimed a
   [How the data is organized into tables](#Data_in_tables) <br />
   [Constraints and triggers](#Constraints) <br />
     [Examples](#constraint_and_trigger_and_demos) <br />
-  [Calculating availability intervals for a wave](#Calculating_intervals) <br />
+  [Determining the resources availability for a wave](#Calculating_intervals) <br />
 [Stage B: Dispatching orders and vehicles among employees and preparing shipment assignments](#Stage_B) <br />
 [Acknowledgements](#Acknowledgements) <br />
 
@@ -128,9 +128,11 @@ Examples demonstrating how these constraints and triggers enforce the data integ
 <a href="/src/examples/triggers_demo.sql">triggers_demo.sql</a>. 
 
 
-<a name = "Calculating_intervals"><h3>Calculating availability for a wave</h3></a>
+<a name = "Calculating_intervals"><h3>Determining the resources availability for a wave</h3></a>
 
-Speaking mathematically, the problem of determining an employee’s availability for a given wave is essentially a problem of finding the intersection between two sets: the wave’s time interval and the union of all the time intervals when the employee is available (taking into account the employee’s regular availability and blocked periods). To solve this problem, one has to do some manipulations with inequalities that define the time intervals involved. The same is true of determining vehicle availability.
+Speaking mathematically, the problem of determining an employee’s availability for a given wave is essentially a problem of finding the intersection between two sets: the wave’s time interval and the union of all the time intervals when the employee is available (taking into account the employee’s regular availability and blocked periods). To solve this problem, one has to do some manipulations with inequalities that define the time intervals involved. 
+
+The same is true of determining vehicle availability.
 
 Such calculations can be performed either at the database level or at the application level of the system (see 
 <a href = "#OM_Shipping diagram">the diagram</a>).
