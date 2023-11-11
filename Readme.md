@@ -78,7 +78,7 @@ The five tables used for determining employee and vehicle availability are:
 - vehicles;
 - vehicles_out_of_service.
 
-After the availability is determined (see <a href="#Calculating_intervals">below</a>), the results are placed into another two tables:
+After the availability is determined , the results are placed into another two tables:
 - wave_available_staff
 - wave_available_vehicles
 
