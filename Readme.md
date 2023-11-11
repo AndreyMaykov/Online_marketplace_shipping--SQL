@@ -130,7 +130,7 @@ Examples demonstrating how these constraints and triggers enforce the data integ
 
 <h3>Determining the resources availability for a wave</h3>
 
-Speaking mathematically, <a name = "Calculating_intervals"></a>the problem of determining an employee’s availability for a given wave is essentially a problem of finding the intersection between two sets: the wave’s time interval and the union of all the time intervals when the employee is available (taking into account the employee’s regular availability and blocked periods). To solve this problem, one has to do some manipulations with inequalities that define the time intervals involved. 
+Speaking mathematically, <a id="Calculating_intervals"></a>the problem of determining an employee’s availability for a given wave is essentially a problem of finding the intersection between two sets: the wave’s time interval and the union of all the time intervals when the employee is available (taking into account the employee’s regular availability and blocked periods). To solve this problem, one has to do some manipulations with inequalities that define the time intervals involved. 
 
 The same is true of determining vehicle availability.
 
